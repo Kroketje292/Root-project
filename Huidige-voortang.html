@@ -99,6 +99,19 @@
         .dropdown:hover .dropbtn {
             background-color: #475067;
         }
+                .progress-container {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
     </style>
 </head>
 
@@ -115,7 +128,13 @@
         <h1>Voortgang</h1>
     </header>
     <div class="container">
-        <p>Hier kunt u de huidige voortang zien van het project</p>
+        <p>Hier kunt u de huidige voortgang zien van het project</p>
+
+        <!-- Voortgangsbalk container -->
+        <div class="progress-container">
+            <!-- Voortgangsbalk -->
+            <div class="progress-bar">0%</div>
+        </div>
     </div>
 </body>
 
