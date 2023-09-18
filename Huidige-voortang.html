@@ -120,6 +120,11 @@
             margin-top: 10px;
             background-color: #ffffff;
         }
+
+        .loading-dots {
+            font-size: 15px;
+            display: inline;
+        }
     </style>
 </head>
 
@@ -147,7 +152,12 @@
             Fase 1 van 5: Analyseren
         </div>
     </div>
-
+    <h2>Werkzaamheden</h2>
+    <p> - Stageovereenkomst >> <i>klaar</i><br>
+        - Stagecontract >> <i>klaar</i><br>
+        - PvA >> bezig<span class="loading-dots" data-loading-id="1"></span><br>
+        - Onderzoeksrapport >> bezig<span class="loading-dots" data-loading-id="1"></span><br>
+    </p>
     <script>
         function updateProgressAndPhase() {
             //voortgangsbalk
@@ -179,6 +189,25 @@
 
         // Roep de updateProgressAndPhase-functie aan om de voortgang en fase bij te werken
         updateProgressAndPhase();
+    </script>
+    <script>
+        function updateLoadingDots() {
+            var loadingDotsElements = document.querySelectorAll('.loading-dots');
+
+            loadingDotsElements.forEach(function (element) {
+                var dots = element.textContent;
+                var loadingId = element.getAttribute('data-loading-id');
+
+                if (dots.length >= 3) {
+                    element.textContent = ".";
+                } else {
+                    element.textContent += ".";
+                }
+            });
+        }
+
+        // Update alle laadeffecten elke 1000 milliseconden (1 seconden)
+        setInterval(updateLoadingDots, 1000);
     </script>
 
 </body>
