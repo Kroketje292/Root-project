@@ -99,9 +99,12 @@
         .dropdown:hover .dropbtn {
             background-color: #475067;
         }
-                .progress-container {
+
+        .progress-container {
             width: 100%;
             background-color: #ddd;
+            text-align: center;
+            padding: 10px 0;
         }
 
         .progress-bar {
@@ -111,6 +114,11 @@
             text-align: center;
             line-height: 30px;
             color: white;
+        }
+
+        .phase-info {
+            margin-top: 10px;
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -135,7 +143,44 @@
             <!-- Voortgangsbalk -->
             <div class="progress-bar">0%</div>
         </div>
+        <div class="phase-info">
+            Fase 1 van 5: Analyseren
+        </div>
     </div>
+
+    <script>
+        function updateProgressAndPhase() {
+            //voortgangsbalk
+            var progress = 10;
+
+            // Selecteer de voortgangsbalk
+            var progressBar = document.querySelector('.progress-bar');
+
+            // Stel de breedte van de voortgangsbalk in op de voortgangspercentage
+            progressBar.style.width = progress + '%';
+
+            // Update de tekst binnen de voortgangsbalk
+            progressBar.textContent = progress + '% voltooid';
+
+            // Update de fase-informatie
+            var phaseInfo = document.querySelector('.phase-info');
+            var currentPhase = 1; // Huidige fase
+            var totalPhases = 5; // Totaal aantal fasen
+            var phaseNames = [
+                "Analyseren",
+                "Analyseren",
+                "Ontwerpen",
+                "Realiseren",
+                "Adviseren"
+            ];
+
+            phaseInfo.textContent = `Fase ${currentPhase} van ${totalPhases}: ${phaseNames[currentPhase - 1]}`;
+        }
+
+        // Roep de updateProgressAndPhase-functie aan om de voortgang en fase bij te werken
+        updateProgressAndPhase();
+    </script>
+
 </body>
 
 </html>
