@@ -13,14 +13,22 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Apache2 installeren
-print_yellow "Installing Apache2"
-apt update
-apt install -y apache2
+# Controleren of Apache2 is geïnstalleerd
+if [ -x "$(command -v apache2)" ]; then
+  print_yellow "Apache2 is already installed."
+else
+  print_yellow "Apache2 is not yet installed. Installing..."
+  apt update
+  apt install -y apache2
+fi
 
-# Git installeren
-print_yellow "Installing Git..."
-apt install -y git
+# Controleren of Git is geïnstalleerd
+if [ -x "$(command -v git)" ]; then
+  print_yellow "Git is already installed."
+else
+  print_yellow "Git is not yet installed. Installing..."
+  apt install -y git
+fi
 
 # De repository clonen
 print_yellow "Cloning Git repository"
@@ -33,7 +41,7 @@ chown -R www-data:www-data uitprobeersel
 # Naar uitprobeersel directory gaan
 cd /var/www/html/uitprobeersel
 
-# Bestanden van site verplaatsen naar html directory
+# Bestanden van uitprobeerselfolder verplaatsen naar html directory
 mv -v -f /var/www/html/uitprobeersel/* /var/www/html/
 cd ..
 
