@@ -11,7 +11,7 @@ sudo chmod 777 install-webserver(Ubuntu-only)
 ```
 Execute the script as root <br>
 ```bash
-sudo ./install-webserver(Ubuntu-only)`
+sudo ./install-webserver(Ubuntu-only)
 ```
 This script can also be used to update the website if changes have been made <br>
 
