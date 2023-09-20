@@ -1,5 +1,5 @@
 # Uitprobeersel
-Simple web server. Download and install one of the scripts in the script(s) folder and run it on a Linux (Ubuntu) or Windows server machine.
+Simple web server. Download and install one of the scripts in the Scripts folder and run it on a Linux (Ubuntu) or Windows server machine.
 
 # For Ubuntu
 
