@@ -22,4 +22,6 @@ You can do this by following these steps:
 - Go to sites and click on add website
 - Give the site a name and add the physical path of the website contents you just downloaded via the script (for example: C:\Website\uitprobeersel)
 - Make sure you disable or remove the default website. Having both websites active on the same port wil cause conflicts.
+
+*Make sure you execute the PowerShell script as administrator!*
       
