@@ -3,9 +3,10 @@ Simple web server. Download and install one of the scripts in the script(s) fold
 
 # For Ubuntu
 Copy the script to your ubuntu machine. <br>
-This script can also be used to update the website if changes have been made <br>
 Execute the script as root 
 Example: sudo ./install-webserver(Ubuntu-only) <br>
+This script can also be used to update the website if changes have been made <br>
+
 
 # For Windows server
 The "Install-website-for-Windows" script exclusively handles the installation of the website content and does NOT include the installation of a web server.
