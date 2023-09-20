@@ -3,6 +3,7 @@ Simple web server. Download and install one of the scripts in the script(s) fold
 
 # For Ubuntu
 Copy the script to your ubuntu machine. <br>
+
 Make sure you give the script the correct permissions <br>
 *Example*: ***sudo chmod 777 install-webserver(Ubuntu-only)*** <br>
 
