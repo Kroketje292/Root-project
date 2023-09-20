@@ -5,10 +5,10 @@ Simple web server. Download and install one of the scripts in the script(s) fold
 Copy the script to your ubuntu machine. <br>
 
 Make sure you give the script the correct permissions <br>
-*Example*: ***sudo chmod 777 install-webserver(Ubuntu-only)*** <br>
+*Example*: `sudo chmod 777 install-webserver(Ubuntu-only)` <br>
 
 Execute the script as root <br>
-*Example*: ***sudo ./install-webserver(Ubuntu-only)*** <br>
+*Example*: `sudo ./install-webserver(Ubuntu-only)` <br>
 
 This script can also be used to update the website if changes have been made <br>
 
@@ -19,12 +19,4 @@ You can do this by following these steps:
 - Go to sites and click on add website
 - Give the site a name and add the physical path of the website contents you just downloaded via the script (for example: C:\Website\uitprobeersel)
 - Make sure you disable or remove the default website. Having both websites active on the same port wil cause conflicts.
-
-<clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
-  Copy path
-</clipboard-copy>
-<div id="blob-path">src/index.js</div>
-document.addEventListener('clipboard-copy', function(event) {
-  const button = event.target
-  button.classList.add('highlight')
-})
+      
