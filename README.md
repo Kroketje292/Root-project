@@ -6,4 +6,4 @@ Execute the script as root
 Example: sudo ./install-webserver(Ubuntu-only)
 
 # For Windows
-**WIP**
+*WIP*
