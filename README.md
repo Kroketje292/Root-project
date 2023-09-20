@@ -2,14 +2,17 @@
 Simple web server. Download and install one of the scripts in the script(s) folder and run it on a Linux (Ubuntu) or Windows server machine.
 
 # For Ubuntu
+
 Copy the script to your ubuntu machine. <br>
 
 Make sure you give the script the correct permissions <br>
-*Example*: `sudo chmod 777 install-webserver(Ubuntu-only)` <br>
-
+```bash
+sudo chmod 777 install-webserver(Ubuntu-only) <br>
+```
 Execute the script as root <br>
-*Example*: `sudo ./install-webserver(Ubuntu-only)` <br>
-
+```bash
+sudo ./install-webserver(Ubuntu-only)` <br>
+```
 This script can also be used to update the website if changes have been made <br>
 
 # For Windows server
