@@ -7,11 +7,11 @@ Copy the script to your ubuntu machine. <br>
 
 Make sure you give the script the correct permissions <br>
 ```bash
-sudo chmod 777 install-webserver(Ubuntu-only) <br>
+sudo chmod 777 install-webserver(Ubuntu-only)
 ```
 Execute the script as root <br>
 ```bash
-sudo ./install-webserver(Ubuntu-only)` <br>
+sudo ./install-webserver(Ubuntu-only)`
 ```
 This script can also be used to update the website if changes have been made <br>
 
