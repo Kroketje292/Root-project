@@ -2,8 +2,8 @@
 Simple web server. Download and install one of the scripts in the script(s) folder and run it on a Linux (Ubuntu) or Windows server machine.
 
 # For Ubuntu
-Execute the script as root <br>
-Example: sudo ./install-webserver(Ubuntu-only)
+Execute the script as root 
+Example: sudo ./install-webserver(Ubuntu-only) <br>
 
 # For Windows server
 The "Install-website-for-Windows" script exclusively handles the installation of the website content and does NOT include the installation of a web server.
