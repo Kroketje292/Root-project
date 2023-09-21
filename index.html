@@ -132,7 +132,7 @@
     </div>
     <div class="information_container">
         <p>Laat je persoonlijke gegevens achter, zodat we ze zonder enige terughoudendheid kunnen doorverkopen aan de Chinese overheid!</p>
-        <form id="myForm">
+       <form id="myForm" action="opslaan.php" method="post">
             <label for="name">Naam:</label>
             <input type="text" id="name" name="name" required><br><br>
             <label for="email">E-mail:</label>
@@ -145,36 +145,6 @@
     <div class="bottom-text">
         <p><i>Powered by ChatGPT</i></p>
     </div>
-    <script>
-        // Luister naar het formulierinzendingsevenement
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Voorkom standaard formulierversending
-
-            // Haal gegevens uit het formulier
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-
-            // Combineer gegevens in een tekst
-            var data = "Naam: " + name + "\nE-mail: " + email + "\nBericht: " + message;
-
-            // Creëer een nieuw Blob-object om de gegevens in op te slaan
-            var blob = new Blob([data], { type: "text/plain" });
-
-            // Creëer een hyperlink om het tekstbestand te downloaden
-            var a = document.createElement("a");
-            a.href = URL.createObjectURL(blob);
-            a.download = "gegevens.txt";
-            a.style.display = "none";
-            document.body.appendChild(a);
-
-            // Klik op de hyperlink om het downloaden te starten
-            a.click();
-
-            // Verwijder de hyperlink nadat het downloaden is gestart
-            document.body.removeChild(a);
-        });
-    </script>
 </body>
 
 </html>

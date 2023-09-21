@@ -1,3 +1,4 @@
+﻿
 # Controleer of het script wordt uitgevoerd als administrator
 $adminRights = [System.Security.Principal.WindowsPrincipal][System.Security.Principal.WindowsIdentity]::GetCurrent()
 $adminCheck = $adminRights.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -25,10 +26,10 @@ $env:Path += ";C:\Program Files\Git\cmd;C:\Program Files\Git\bin"
 git --version
 
 # Directory aanmaken voor webserver contents
-New-Item -ItemType Directory -Path "C:\inetpub\wwwroot"
+New-Item -ItemType Directory -Path "C:\Website\"
 
 # Verander de huidige directory naar de doeldirectory
-Set-Location -Path C:\inetpub\wwwroot
+Set-Location -Path C:\Website\
 
 # Clone je GitHub-repository naar de doeldirectory
 git clone https://github.com/Kroketje292/uitprobeersel.git
