@@ -13,8 +13,6 @@ Execute the script as root <br>
 ```bash
 sudo ./install-webserver(Ubuntu-only)
 ```
-This script can also be used to update the website if changes have been made <br>
-
 # For Windows server
 The 'Install-webserver-for-Windows-server' script installs a webserver with custom website on a windows server. <br>
 
