@@ -16,8 +16,7 @@ sudo ./install-webserver(Ubuntu-only)
 Use the 'Update-webserver' script to update the webserver
 # For Windows server
 The 'Install-webserver-for-Windows-server' script installs a webserver with custom website on a windows server. <br>
+This script also makes use of server side scripting in order to make the form function.
 
-# Extra (Windows server only)
-To make the form on the start page function properly, you need to utilize server-side scripting. Below, you'll find an explanation of how to accomplish this. <br>
 *Make sure you execute the PowerShell script as administrator!*
       
