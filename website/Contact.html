@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkom bij het project van Michiel Ankone</title>
+    <style>
+        body {
+            background-image: url('Images/Vraag.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FA044F;
+            color: white;
+            text-align: center;
+            padding: 32px;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        header img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .top-menu {
+            position: absolute;
+            top: -35%;
+            right: 0;
+            padding: 10px;
+        }
+
+        .top-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .top-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+        }
+
+        .form {
+            color: #ffffff9a;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            margin: -150px 0 0 -150px;
+            width: 300px;
+            height: 300px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .titel_container {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Images/ROOT.png" alt="You are not supposed to see this" style="width:130px;height:45px;">
+        </a>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="Planning.html">Projectplanning</a></li>
+                <li><a href="Huidige-voortang.html">Huidige Voortgang</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titel_container">
+        <h1 style="font-size: 34px; text-align: center; color: #fff; margin-top: 40px;">
+            Geïnteresseerd in mijn project of heb je andere vragen?
+        </h1>
+        <p style="font-size: 18px; text-align: center; color: #fff; margin-top: 10px;">
+            Laat je gegevens hier achter met feedback of opmerkingen over het project!
+        </p>
+
+    </div>
+    <div class="form">
+        <form id="myForm" action="opslaan.php" method="post">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Bericht:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required
+                style="background-color: rgba(0, 0, 0, 0.3); color:white;"></textarea><br><br>
+            <input type="submit" value="Versturen">
+        </form>
+    </div>
+</body>
+
+</html>
