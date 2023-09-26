@@ -20,5 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Bevestiging voor de gebruiker
     echo "Bedankt, $name! Je gegevens zijn opgeslagen.";
+
+
+
 }
 ?>
