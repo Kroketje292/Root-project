@@ -4,126 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welkom bij de startfase van mijn project</title>
+    <title>Projectplanning</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-image: url('Images/Planning-achtergrond.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Century, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-color: #FA044F;
-            color: white;
-            text-align: center;
-            padding: 0px;
-        }
-
         h1 {
+            text-align: center;
             font-size: 36px;
         }
 
-        nav {
-            text-align: center;
-            margin-top: 20px;
+        header h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
         }
 
-        nav a {
+        header img {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .header {
+            background-color: #FA044F;
+            padding: 32px;
+            text-align: center;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 1;
+        }
+
+
+        #navbar a {
+            font-family: Arial, sans-serif;
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            color: #007acc;
-            margin: 0 20px;
-            font-weight: bold;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+        .top-menu {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            padding: 10px;
+        }
+
+
+        .second-content {
+            height: 1000px;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            left: 10px;
         }
 
         .container {
             text-align: center;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .bottom-text {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            background-color: #ffffff;
-            color: rgb(163, 163, 163);
-
-        }
-
-        .dropbtn {
-            background-color: #FA044F;
             color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-        }
-
-        .dropdown {
             position: absolute;
-            display: inline-block;
-            top: 20px;
-            left: 20px;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: inline-block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #475067;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 120px;
+            background-color: rgba(97, 97, 97, 0.432);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="Huidige-voortang.html">Huidige Voortgang</a>
-                <a href="Contact.html">Contact</a>
+        <div id="navbar">
+            <div class="header">
+                <a href="index.html">
+                    <img src="Images/ROOT.png" alt="You are not supposed to see this" style="width:130px;height:45px;">
+                </a>
             </div>
+            <nav class="top-menu">
+                <ul>
+                    <a href="Project-context.html">Projectinformatie</a>
+                    <a href="Planning.html">Projectplanning</a>
+                    <a href="Huidige-voortang.html">Huidige Voortgang</a>
+                    <a href="Contact.html">Contact</a>
+                </ul>
         </div>
-        <a href="index.html">
-            <img src="Images/ROOT.png" alt="You are not supposed to see this" style="width:130px;height:45px;">
-        </a>
-        <h1>Projectplanning</h1>
+        <div class="container">
+            <h1>Onderaan deze pagina staat gedetailleerde informatie over de projectplanning.</h1>
+        </div>
     </header>
-    <div class="container">
-        <p2>Hieronder is de planning van het project te zien</p2>
-        <img src="Images/Planning-screenshot.png" alt="Afbeelding van planning">
-    </div>
-    <a href="Files/Planning.xlsx" download>Download de Planning</a>
-    <div class="bottom-text">
-        <p><i>Powered by ChatGPT</i></p>
-    </div>
+    <div class="second-content"></div>
+    <img src="Images/Planning-screenshot.png" alt="Afbeelding van planning">
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
 </body>
 
 </html>

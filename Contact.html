@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welkom bij het project van Michiel Ankone</title>
+    <title>Contact</title>
     <style>
         body {
             background-image: url('Images/Vraag.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
+            font-family: Century, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
@@ -107,21 +107,47 @@
             text-align: center;
             padding: 20px;
         }
+
+        #navbar a:hover {
+            color: black;
+        }
+
+        #navbar a {
+            font-family: Arial, sans-serif;
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .top-menu {
+            position: absolute;
+            top: -38px;
+            right: 0;
+            padding: 10px;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="Images/ROOT.png" alt="You are not supposed to see this" style="width:130px;height:45px;">
-        </a>
-        <nav class="top-menu">
-            <ul>
-                <li><a href="Planning.html">Projectplanning</a></li>
-                <li><a href="Huidige-voortang.html">Huidige Voortgang</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="navbar">
+            <div class="header">
+                <a href="index.html">
+                    <img src="Images/ROOT.png" alt="You are not supposed to see this" style="width:130px;height:45px;">
+                </a>
+            </div>
+            <nav class="top-menu">
+                <ul>
+                    <a href="Project-context.html">Projectinformatie</a>
+                    <a href="Planning.html">Projectplanning</a>
+                    <a href="Huidige-voortang.html">Huidige Voortgang</a>
+                    <a href="Contact.html">Contact</a>
+                </ul>
+        </div>
     </header>
     <div class="titel_container">
         <h1 style="font-size: 34px; text-align: center; color: #fff; margin-top: 40px;">
