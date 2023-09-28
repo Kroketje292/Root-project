@@ -102,6 +102,48 @@
             color: white;
             font-weight: normal;
         }
+
+        .werkzaamheden {
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            border-radius: 120px;
+            background-color: #92929286
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            background-color: #FA044F;
+            z-index: 1;
+            top: 250%;
+            width: 100%
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #FA044F;
+        }
     </style>
 </head>
 
@@ -115,16 +157,45 @@
             </div>
             <nav class="top-menu">
                 <ul>
-                    <a href="Project-context.html">Projectinformatie</a>
+                    <li class="dropdown">
+                        <a href="Project-context.html">Projectinformatie</a>
+                        <div class="dropdown-content">
+                            <a href="Project-context-over-root.html">Over ROOT</a>
+                            <a href="Project-context-hoofdvraag.html">Hoofdvraag</a>
+                        </div>
+                    </li>
                     <a href="Planning.html">Projectplanning</a>
                     <a href="Huidige-voortang.html">Huidige Voortgang</a>
                     <a href="Contact.html">Contact</a>
                 </ul>
         </div>
     </header>
-    <div class="container">
-        <h1>Work in progress...</h1>
-        <p>We're working on something very cool here. Make sure to come back later!</p>
+    <div class="werkzaamheden">
+        <h1>Over het project</h1>
+        <p>Root maakt al jaren gebruik van een interne SharePoint server gekoppeld aan een CMDB voor haar (technische)
+            documentatie. De SharePoint-server is erg verouderd en heeft nooit echt tot een tevreden gebruik geleid mede
+            doordat deze nooit goed is opgezet met de mogelijkheden van SharePoint maar een grotendeels 1-op-1 kopie was
+            van de Twiki-server die Root daarvoor in gebruik had.
+            Op de server wordt vooral de infrastructuur van klant en Root omgevingen gedocumenteerd en is verder in
+            gebruik als knowledgebase voor alle medewerkers.
+            <br>
+            <br>
+            Root is op zoek naar een nieuwe oplossing waarin zowel de administratieve als technische documentatie kan
+            worden bijgehouden inclusief een koppeling met de aanwezige Configuration Management Database.
+            <br>
+            <br>
+            De opdracht binnen de stage behelst het in kaart brengen van de eisen en wensen van de gebruikers, het
+            onderzoek naar hedendaagse documentatiesystemen (liefst on-premise) resulterend in een shortlist van
+            mogelijke oplossingen. Verder het inrichten van max. 2 POC omgevingen waaruit we idealiter een keuze maken.
+            En daaruit voorvloeiend een advies over hoe de documentatie het beste opgezet kan worden in de betreffende
+            oplossing en hoe de migratie van het huidige SharePoint gedaan kan worden naar deze opzet.
+            <br>
+            <br>
+            Naast de onderzoeksopdracht wordt de stagiaire geacht gedeeltelijk mee te draaien bij de afdeling Operations
+            en zal daarbij samen en onder begeleiding van de Operations-medewerkers dagelijkse werkzaamheden uitvoeren.
+            Bijvoorbeeld het deels meedraaien in de 1e lijns telefoonbeantwoording, logistieke verwerking van
+            bestellingen of het assisteren bij de werkzaamheden van de overige medewerkers.
+        </p>
     </div>
 </body>
 
